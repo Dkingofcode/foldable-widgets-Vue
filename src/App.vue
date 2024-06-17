@@ -1,17 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>{{ title }}</h1>
+    <WidgetsComponent />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
+import WidgetsComponent from './components/WidgetComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+   // HelloWorld
+   WidgetsComponent,
+  },
+  data() {
+     return {
+       title: 'foldable-widgets-app',
+     };
+  },
+};
 </script>
 
 <style>
